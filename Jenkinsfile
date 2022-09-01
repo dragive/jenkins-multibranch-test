@@ -1,5 +1,6 @@
 pipeline {
- stages{
+	agent: any
+stages{
     stage("Test"){
         echo "Test has been executed"
     }
