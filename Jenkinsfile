@@ -1,11 +1,21 @@
 pipeline {
-	agent: any
-stages{
-    stage("Test"){
-        echo "Test has been executed"
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
- stage("Build"){
-        echo "Build has been executed"
-    }
- }
 }
